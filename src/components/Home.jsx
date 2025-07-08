@@ -210,79 +210,80 @@ function Home() {
     <div className="flex-column flex-md-row">
       {/* Hero */}
       <motion.div
-      className="py-5 position-relative overflow-hidden"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={fadeInUp}
-      style={{ backgroundColor: "#12294A" }}
-    >
-      <div className="container my-5">
-        <div className="row align-items-center p-3">
-          {/* TEKS */}
-          <div className="col-12 col-md-6 text-white mb-4 mb-md-0 text-center text-md-start">
-            <h3 className="fw-semibold" style={{ minHeight: "2.5rem" }}>
-              {text}
-              <span className="blinking-cursor">|</span>
-            </h3>
+        className="py-5 position-relative overflow-hidden"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        style={{ backgroundColor: "#12294A" }}
+      >
+        <div className="container my-5">
+          <div className="row align-items-center p-3">
+            {/* TEKS */}
+            <div className="col-12 col-md-5 text-white mb-4 mb-md-0 text-center text-md-start">
+              <h3 className="fw-semibold" style={{ minHeight: "2.5rem" }}>
+                {text}
+                <span className="blinking-cursor">|</span>
+              </h3>
 
-            <h1 className="display-4 fw-bold">BaTas</h1>
+              <h1 className="display-4 fw-bold">BaTas</h1>
 
-            {/* Subheadline */}
-            <p className="fst-italic text-light">
-              Temukan talenta terbaik dari SMK TI Bazma dan lihat karya nyata mereka.
-            </p>
+              {/* Subheadline */}
+              <p className="fst-italic text-light">
+                Temukan talenta terbaik dari SMK TI Bazma dan lihat karya nyata
+                mereka.
+              </p>
 
-            <p className="text-justify">
-              BaTas adalah platform untuk menampilkan portofolio siswa SMK.
-              Siswa dapat membagikan proyek mereka secara online dan masyarakat
-              bisa mengakses informasi tersebut dengan mudah.
-            </p>
+              <p className="text-justify">
+                BaTas adalah platform untuk menampilkan portofolio siswa SMK.
+                Siswa dapat membagikan proyek mereka secara online dan
+                masyarakat bisa mengakses informasi tersebut dengan mudah.
+              </p>
 
-            {/* Badge Keahlian */}
-            <div className="d-flex flex-wrap gap-2 mt-3">
-              <span className="badge bg-light text-dark">Web Developer</span>
-              <span className="badge bg-light text-dark">UI/UX Design</span>
-              <span className="badge bg-light text-dark">Networking</span>
+              {/* Badge Keahlian */}
+              <div className="d-flex flex-wrap gap-2 mt-3">
+                <span className="badge bg-light text-dark">Web Developer</span>
+                <span className="badge bg-light text-dark">UI/UX Design</span>
+                <span className="badge bg-light text-dark">Networking</span>
+              </div>
+
+              {/* Divider */}
+              <div
+                style={{
+                  width: "60px",
+                  height: "5px",
+                  backgroundColor: "#ffffff",
+                  borderRadius: "10px",
+                  marginTop: "1.5rem",
+                  marginBottom: "1rem",
+                }}
+              ></div>
+
+              {/* Tombol CTA */}
+              <a
+                href="cari-siswa"
+                className="btn text-black"
+                style={{ backgroundColor: "white" }}
+              >
+                Lihat Siswa
+              </a>
             </div>
 
-            {/* Divider */}
-            <div
-              style={{
-                width: "60px",
-                height: "5px",
-                backgroundColor: "#ffffff",
-                borderRadius: "10px",
-                marginTop: "1.5rem",
-                marginBottom: "1rem",
-              }}
-            ></div>
-
-            {/* Tombol CTA */}
-            <a
-              href="cari-siswa"
-              className="btn text-black"
-              style={{ backgroundColor: "white" }}
-            >
-              Lihat Siswa
-            </a>
-          </div>
-
-          {/* GAMBAR */}
-          <div className="col-12 col-md-6 d-flex justify-content-center">
-            <motion.img
-              src={orang}
-              alt="Ilustrasi Siswa"
-              className="img-fluid"
-              style={{ maxHeight: "600px", objectFit: "contain" }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            />
+            {/* GAMBAR */}
+            <div className="col-12 col-md-6 d-flex justify-content-center">
+              <motion.img
+                src={orang}
+                alt="Ilustrasi Siswa"
+                className="img-fluid"
+                style={{ maxHeight: "600px", objectFit: "contain" }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
 
       {/* Tentang */}
       <motion.div
@@ -326,7 +327,7 @@ function Home() {
         <h2 className="text-center fw-bold display-6 mb-3 text-white">
           🌟 Siswa Berposisi Khusus
         </h2>
-        <p className="text-center mb-5 text-white fs-5">
+        <p className="text-center mb-3 text-white fs-5">
           Alumni yang telah bekerja di berbagai perusahaan ternama
         </p>
 
@@ -391,7 +392,7 @@ function Home() {
                       <h3 className="fw-bold">
                         {nonPelajar[currentIndex].name}
                       </h3>
-                      <p className="ml-3">
+                      <p className="mr-3">
                         {truncateText(
                           nonPelajar[currentIndex].deskripsi ||
                             "Tidak ada deskripsi",
@@ -585,16 +586,13 @@ function Home() {
             <div className="col-md-5">
               <h1 className="jua-regular">Project Siswa</h1>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
+                Di balik setiap proyek, ada semangat belajar, kerja keras, dan
+                inovasi. Proyek-proyek ini adalah bukti bahwa siswa SMK TIBAZMA
+                mampu menciptakan teknologi yang bermanfaat dan siap bersaing di
+                dunia industri maupun masyarakat.
               </p>
               <ul>
-                <li>SISMAKO</li>
-                <p>Sistem Manajemen Sekolah</p>
+                <li>SISMAKO (Sistem Managament Sekolah)</li>
                 <li>Webite Sekolah</li>
 
                 <li>Sistem Absensi</li>
@@ -643,7 +641,11 @@ function Home() {
                   <img
                     src={sas}
                     className=""
-                    style={{ height: "360px", objectFit: "cover", width: "100%" }}
+                    style={{
+                      height: "360px",
+                      objectFit: "cover",
+                      width: "100%",
+                    }}
                   />
                   <div className="p-3 bg-white">
                     <h5 className="text-dark">Sismako</h5>
